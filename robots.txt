@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /careers/
+Allow: /images/
+
+Sitemap: https://lendurai.com/sitemap.xml 
