@@ -468,11 +468,22 @@ h2 {
 
 /* Footer */
 footer {
-    background-color: var(--background);
-    border-top: 1px solid var(--border);
-    color: var(--text-secondary);
-    padding: 1rem 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 2rem 0;
     text-align: center;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
 }
 
 /* Responsive Design */
