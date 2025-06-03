@@ -1,0 +1,110 @@
+/* Spacing utilities */
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+/* Text utilities */
+.text-center { text-align: center; }
+.text-bold { font-weight: 700; }
+.text-normal { font-weight: 400; }
+
+/* Background utilities */
+.bg-primary { background-color: var(--primary-color); }
+.bg-secondary { background-color: var(--secondary-color); }
+
+/* Display utilities */
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+.d-none { display: none; }
+
+/* Flex utilities */
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+.justify-center { justify-content: center; }
+.align-center { align-items: center; }
+.flex-wrap { flex-wrap: wrap; }
+
+/* Grid utilities */
+.grid-cols-1 { grid-template-columns: 1fr; }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 768px) {
+    .grid-cols-sm-1 { grid-template-columns: 1fr; }
+    .flex-sm-column { flex-direction: column; }
+}
+
+/* Visibility utilities */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Container utilities */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Link utilities */
+.link-reset {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link-hover:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+/* Image utilities */
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Animation utilities */
+.animate-fade {
+    transition: opacity 0.3s ease;
+}
+
+.animate-scale {
+    transition: transform 0.3s ease;
+}
+
+.animate-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Shadow utilities */
+.shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+} 

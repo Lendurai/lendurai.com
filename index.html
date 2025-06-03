@@ -3,30 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lendurai - Autonomous Navigation for Military Drones | GNSS-Independent UAV Solutions</title>
-    <meta name="description" content="Lendurai enables military drones to operate without GPS/GNSS using computer vision and AI. Providing autonomous navigation solutions for defence and public sector UAVs.">
-    <meta name="keywords" content="autonomous drones, military UAV, GNSS-independent navigation, defence technology, computer vision, AI drones">
+    <title>Lendurai - satellite navigation and radio independent missions for drones.</title>
+    <meta name="description" content="Lendurai enables drones to operate without GNSS using computer vision and AI. Providing autonomous navigation solutions for defence and public sector UAVs.">
+    <meta name="keywords" content="autonomous drones, UAV, GNSS-independent navigation, defence technology, computer vision, AI drones">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lendurai.com/">
-    <meta property="og:title" content="Lendurai - Autonomous Navigation for Military Drones">
-    <meta property="og:description" content="Enabling military drones to operate without GPS/GNSS using computer vision and AI. Advanced autonomous navigation solutions for defence UAVs.">
+    <meta property="og:title" content="Lendurai - satellite navigation and radio independent missions for drones.">
+    <meta property="og:description" content="Lendurai enables drones to operate without GNSS using computer vision and AI. Providing autonomous navigation solutions for defence and public sector UAVs.">
     <meta property="og:image" content="https://lendurai.com/images/hero.webp">
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://lendurai.com/">
-    <meta name="twitter:title" content="Lendurai - Autonomous Navigation for Military Drones">
-    <meta name="twitter:description" content="Enabling military drones to operate without GPS/GNSS using computer vision and AI. Advanced autonomous navigation solutions for defence UAVs.">
-    <meta name="twitter:image" content="https://lendurai.com/images/hero.webp">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lendurai.com/">
+    <meta property="twitter:title" content="Lendurai - satellite navigation and radio independent missions for drones.">
+    <meta property="twitter:description" content="Lendurai enables drones to operate without GNSS using computer vision and AI. Providing autonomous navigation solutions for defence and public sector UAVs.">
+    <meta property="twitter:image" content="https://lendurai.com/images/hero.webp">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://lendurai.com/">
     
+    <!-- Preload critical assets -->
+    <link rel="preload" href="styles/main.css" as="style">
+    <link rel="preload" href="images/hero.webp" as="image" type="image/webp">
+    <link rel="preload" href="images/hero-mobile.webp" as="image" type="image/webp" media="(max-width: 768px)">
+    <link rel="preload" href="images/logo-text.png" as="image" type="image/png">
+    
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="preload" as="image" href="images/hero.webp" type="image/webp">
-    <link rel="preload" as="image" href="images/hero-mobile.webp" type="image/webp" media="(max-width: 768px)">
 
     <!-- JSON-LD structured data -->
     <script type="application/ld+json">
@@ -36,7 +40,7 @@
       "name": "Lendurai OÜ",
       "url": "https://lendurai.com",
       "logo": "https://lendurai.com/images/logo.png",
-      "description": "Lendurai enables military drones to operate independently of global navigation satellite systems using computer vision and AI.",
+      "description": "Lendurai - Satellite navigation and radio independent missions for drones.",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "Estonia"
@@ -50,26 +54,29 @@
     </script>
 </head>
 <body>
-    <header>
+    <header role="banner">
         <div class="header-content">
-            <img src="images/logo-text.png" alt="Lendurai Logo" class="logo-header">
-            <nav>
+            <a href="/" aria-label="Lendurai Home">
+                <img src="images/logo-text.png" alt="Lendurai Logo" class="logo-header" width="120" height="24">
+            </a>
+            <nav role="navigation" aria-label="Main navigation">
                 <a href="#about">About Us</a>
                 <a href="#careers">Careers</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p>Satellite navigation and radio independent missions for drones.</p>
+    <main role="main">
+        <section class="hero" aria-label="Hero section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p>Satellite navigation and radio independent missions for drones.</p>
+                </div>
+                <div class="hero-logo">
+                    <img src="images/logo.png" alt="Lendurai Logo" class="logo" width="350" height="350" loading="lazy">
+                </div>
             </div>
-            <div class="hero-logo">
-                <img src="images/logo.png" alt="Logo" class="logo" loading="lazy">
-            </div>
-        </div>
-    </section>
+        </section>
 
     <section id="about">
         <div class="section-content">
@@ -121,102 +128,103 @@
         </div>
     </section>
 
-    <section id="careers" style="background-color: var(--secondary-color);">
-        <div class="section-content">
-            <h2>Careers</h2>
-            <p style="text-align: center; margin-bottom: 2rem;">
-                Join our team and help shape the future of autonomous drone technology.
-            </p>
-            <div class="jobs-grid">
-                <div class="job-card" onclick="window.location.href='careers/software-engineer-control.html'" style="cursor: pointer;">
-                    <h3>
-                        Software Engineer, Control Systems
-                        <div class="job-location">
-                            <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>Tallinn, Estonia (On-site)</span>
-                        </div>
-                    </h3>
-                    <p>Design and implement robust flight control systems for autonomous UAV operations in GNSS-denied environments.</p>
-                </div>
-                <div class="job-card" onclick="window.location.href='careers/software-engineer-simulation.html'" style="cursor: pointer;">
-                    <h3>
-                        Software Engineer, Simulation
-                        <div class="job-location">
-                            <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>Tallinn, Estonia (Hybrid)</span>
-                        </div>
-                    </h3>
-                    <p>Design and develop realistic simulation environments for UAV operations, focusing on flight dynamics, sensor fusion, and mission scenarios.</p>
-                </div>
-                <div class="job-card" onclick="window.location.href='careers/software-engineer-ui.html'" style="cursor: pointer;">
-                    <h3>
-                        Software Engineer, User Interface
-                        <div class="job-location">
-                            <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>Tallinn, Estonia (Hybrid)</span>
-                        </div>
-                    </h3>
-                    <p>Create intuitive and responsive user interfaces for drone control and mission planning systems, focusing on real-time visualization and operator experience.</p>
-                </div>
-                <div class="job-card" onclick="window.location.href='careers/head-of-business-development.html'" style="cursor: pointer;">
-                    <h3>
-                        Head of Business Development
-                        <div class="job-location">
-                            <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>Tallinn, Estonia (Hybrid)</span>
-                        </div>
-                    </h3>
-                    <p>Lead our B2G sales, build partnerships with UAV manufacturers, expand into new defence markets, and shape our go-to-market strategy.</p>
-                </div>
-                <div class="job-card" onclick="window.location.href='careers/head-of-strategic-affairs.html'" style="cursor: pointer;">
-                    <h3>
-                        Head of Strategic Affairs
-                        <div class="job-location">
-                            <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>Tallinn, Estonia (Hybrid)</span>
-                        </div>
-                    </h3>
-                    <p>Lead our communications, public positioning, and government-facing initiatives while managing strategic R&D programmes and grants.</p>
-                </div>
-                <div class="job-card" onclick="window.location.href='careers/country-manager-ukraine.html'" style="cursor: pointer;">
-                    <h3>
-                        Country Manager, Ukraine
-                        <div class="job-location">
-                            <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>Kyiv, Ukraine (On-site)</span>
-                        </div>
-                    </h3>
-                    <p>Lead all business development and operations in Ukraine, driving procurement qualification, stakeholder engagement, and local partnerships.</p>
+        <section id="careers" style="background-color: var(--secondary-color);">
+            <div class="section-content">
+                <h2>Careers</h2>
+                <p style="text-align: center; margin-bottom: 2rem;">
+                    Join our team and help shape the future of autonomous drone technology.
+                </p>
+                <div class="jobs-grid">
+                    <div class="job-card" onclick="window.location.href='careers/software-engineer-control.html'" style="cursor: pointer;">
+                        <h3>
+                            Software Engineer, Control Systems
+                            <div class="job-location">
+                                <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <span>Tallinn, Estonia (On-site)</span>
+                            </div>
+                        </h3>
+                        <p>Design and implement robust flight control systems for autonomous UAV operations in GNSS-denied environments.</p>
+                    </div>
+                    <div class="job-card" onclick="window.location.href='careers/software-engineer-simulation.html'" style="cursor: pointer;">
+                        <h3>
+                            Software Engineer, Simulation
+                            <div class="job-location">
+                                <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <span>Tallinn, Estonia (Hybrid)</span>
+                            </div>
+                        </h3>
+                        <p>Design and develop realistic simulation environments for UAV operations, focusing on flight dynamics, sensor fusion, and mission scenarios.</p>
+                    </div>
+                    <div class="job-card" onclick="window.location.href='careers/software-engineer-ui.html'" style="cursor: pointer;">
+                        <h3>
+                            Software Engineer, User Interface
+                            <div class="job-location">
+                                <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <span>Tallinn, Estonia (Hybrid)</span>
+                            </div>
+                        </h3>
+                        <p>Create intuitive and responsive user interfaces for drone control and mission planning systems, focusing on real-time visualization and operator experience.</p>
+                    </div>
+                    <div class="job-card" onclick="window.location.href='careers/head-of-business-development.html'" style="cursor: pointer;">
+                        <h3>
+                            Head of Business Development
+                            <div class="job-location">
+                                <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <span>Tallinn, Estonia (Hybrid)</span>
+                            </div>
+                        </h3>
+                        <p>Lead our B2G sales, build partnerships with UAV manufacturers, expand into new defence markets, and shape our go-to-market strategy.</p>
+                    </div>
+                    <div class="job-card" onclick="window.location.href='careers/head-of-strategic-affairs.html'" style="cursor: pointer;">
+                        <h3>
+                            Head of Strategic Affairs
+                            <div class="job-location">
+                                <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <span>Tallinn, Estonia (Hybrid)</span>
+                            </div>
+                        </h3>
+                        <p>Lead our communications, public positioning, and government-facing initiatives while managing strategic R&D programmes and grants.</p>
+                    </div>
+                    <div class="job-card" onclick="window.location.href='careers/country-manager-ukraine.html'" style="cursor: pointer;">
+                        <h3>
+                            Country Manager, Ukraine
+                            <div class="job-location">
+                                <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <span>Kyiv, Ukraine (On-site)</span>
+                            </div>
+                        </h3>
+                        <p>Lead all business development and operations in Ukraine, driving procurement qualification, stakeholder engagement, and local partnerships.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="section-content">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <button onclick="window.open('https://signal.me/#eu/VgF-jblBo_TZZJ2agTS4ZGsSv3ToWCm-gCG3_fOv4aqMQQWaQ-1EWpZeADV4Nqhn', '_blank')">
-                    <img src="images/signal.png" alt="Signal Icon">
-                    lendurai.01
-                </button>
+        <section>
+            <div class="section-content">
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <button onclick="window.open('https://signal.me/#eu/VgF-jblBo_TZZJ2agTS4ZGsSv3ToWCm-gCG3_fOv4aqMQQWaQ-1EWpZeADV4Nqhn', '_blank')">
+                        <img src="images/signal.png" alt="Signal Icon">
+                        lendurai.01
+                    </button>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-content">
             <p>© 2025 Lendurai OÜ</p>
             <p>Company number: 16918651 | VAT: EE102706309</p>
