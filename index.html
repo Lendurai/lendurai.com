@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lendurai Autonomous Drones</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="preload" as="image" href="images/hero.webp" type="image/webp">
+    <link rel="preload" as="image" href="images/hero-mobile.webp" type="image/webp" media="(max-width: 768px)">
 </head>
 <body>
     <header>
@@ -18,8 +20,14 @@
     </header>
 
     <section class="hero">
-        <img src="images/logo.png" alt="Logo" class="logo" style="max-width: 600px;">
-        <p>Autonomous unmanned aerial vehicles with satellite navigation <br> and radio control independent operation.</p>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p>Satellite navigation and radio independent missions for drones.</p>
+            </div>
+            <div class="hero-logo">
+                <img src="images/logo.png" alt="Logo" class="logo" loading="lazy">
+            </div>
+        </div>
     </section>
 
     <section id="about">
@@ -79,7 +87,7 @@
                 Join our team and help shape the future of autonomous drone technology.
             </p>
             <div class="jobs-grid">
-                <div class="job-card" onclick="window.open('careers/head-of-business-development.html', '_blank')" style="cursor: pointer;">
+                <div class="job-card" onclick="window.location.href='careers/head-of-business-development.html'" style="cursor: pointer;">
                     <h3>
                         Head of Business Development
                         <div class="job-location">
@@ -91,7 +99,7 @@
                     </h3>
                     <p>Lead our B2G sales, build partnerships with UAV manufacturers, expand into new defence markets, and shape our go-to-market strategy.</p>
                 </div>
-                <div class="job-card" onclick="window.open('careers/head-of-strategic-affairs.html', '_blank')" style="cursor: pointer;">
+                <div class="job-card" onclick="window.location.href='careers/head-of-strategic-affairs.html'" style="cursor: pointer;">
                     <h3>
                         Head of Strategic Affairs
                         <div class="job-location">
@@ -103,7 +111,7 @@
                     </h3>
                     <p>Lead our communications, public positioning, and government-facing initiatives while managing strategic R&D programmes and grants.</p>
                 </div>
-                <div class="job-card" onclick="window.open('careers/country-manager-ukraine.html', '_blank')" style="cursor: pointer;">
+                <div class="job-card" onclick="window.location.href='careers/country-manager-ukraine.html'" style="cursor: pointer;">
                     <h3>
                         Country Manager, Ukraine
                         <div class="job-location">

@@ -4,172 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Head of Strategic Affairs | Lendurai</title>
-    <style>
-        :root {
-            --primary-color: #333;
-            --secondary-color: #444;
-            --accent-color: #007bff;
-            --text-color: #fff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Helvetica, Arial, sans-serif;
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: rgba(34, 34, 34, 0.95);
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(5px);
-        }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-header {
-            height: 40px;
-            width: auto;
-        }
-
-        .back-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
-
-        .back-button:hover {
-            color: var(--accent-color);
-        }
-
-        .back-button svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 100px 20px 40px;
-        }
-
-        .job-description {
-            background-color: var(--secondary-color);
-            padding: 2rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .job-location {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            margin: 2rem 0 1rem;
-        }
-
-        ul {
-            margin-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .application-options {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-
-        .application-option {
-            background-color: var(--secondary-color);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .application-option:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-        }
-
-        .application-option h3 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .application-option p {
-            margin-bottom: 2rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .apply-button {
-            display: inline-block;
-            background-color: transparent;
-            color: white;
-            padding: 1rem 2rem;
-            border: 2px solid white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .apply-button:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        @media (max-width: 768px) {
-            .application-options {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
     <header>
         <div class="header-content">
             <a href="/">
-                <img src="../images/logo.png" alt="Lendurai Logo" class="logo-header">
+                <img src="../images/logo-text.png" alt="Lendurai Logo" class="logo-header">
             </a>
             <a href="/" class="back-button">
                 <svg viewBox="0 0 24 24">
@@ -247,22 +88,14 @@
                     Apply with LinkedIn
                 </h3>
                 <p>Quick application using your LinkedIn profile</p>
-                <a href="https://www.linkedin.com/jobs/view/4233490391" target="_blank" class="apply-button">
+                <a href="https://www.linkedin.com/jobs/view/4233705337" class="apply-button">
                     Apply on LinkedIn
                 </a>
             </div>
-
-            <div class="application-option google-form">
-                <h3>
-                    <svg class="form-icon" viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-1 14H5c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h14c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1zm-3-9H8c-.55 0-1 .45-1 1s.45 1 1 1h8c.55 0 1-.45 1-1s-.45-1-1-1zm0 3H8c-.55 0-1 .45-1 1s.45 1 1 1h8c.55 0 1-.45 1-1s-.45-1-1-1zm-4 3H8c-.55 0-1 .45-1 1s.45 1 1 1h4c.55 0 1-.45 1-1s-.45-1-1-1z"/>
-                    </svg>
-                    Apply with Form
-                </h3>
-                <p>Standard application form</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSchKIZT54qfbIlBgjaP4fw2P9G_njfA4V1G9pR1GMy7fAkcJg/viewform" target="_blank" class="apply-button">
-                    Open Application Form
-                </a>
+            <div class="email-application">
+                <h3>Apply via Email</h3>
+                <p>If you don't have a LinkedIn account, please apply by sending your CV to <a href="mailto:careers@lendurai.com">careers@lendurai.com</a> and provide the following details:</p>
+                <p class="email-requirements">phone number, gross salary expectation, earliest start date, willingness to relocate to work location, eligibility for employment at work location</p>
             </div>
         </div>
     </div>

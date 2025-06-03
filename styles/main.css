@@ -106,16 +106,125 @@ h2 {
 
 /* Hero Section */
 .hero {
+    position: relative;
     padding: 8rem 2rem 4rem;
     text-align: center;
-    background-color: var(--background);
+    background: radial-gradient(circle at center, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.7)), 
+                linear-gradient(rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.65)), 
+                url('../images/hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .hero p {
-    font-size: 1.25rem;
-    max-width: 800px;
-    margin: 1rem auto;
-    color: var(--text-secondary);
+    font-size: 2rem;
+    max-width: 600px;
+    margin: 0;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.hero .logo {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero p {
+        font-size: 1.8rem;
+    }
+
+    .hero .logo {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 1rem 3rem;
+        min-height: 70vh;
+        background-image: radial-gradient(circle at center, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.7)), 
+                         linear-gradient(rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.65)), 
+                         url('../images/hero-mobile.webp');
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-logo {
+        justify-content: center;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+        margin: 0 auto;
+    }
+
+    .hero .logo {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 5rem 1rem 2rem;
+        min-height: 60vh;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    .hero .logo {
+        max-width: 200px;
+    }
+
+    .hero-content {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-height: 600px) {
+    .hero {
+        min-height: auto;
+        padding: 5rem 1rem 2rem;
+    }
 }
 
 /* Team Section */
@@ -236,8 +345,12 @@ h2 {
 .application-options {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 1rem;
+    gap: 3rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
 }
 
 .application-option {
@@ -247,6 +360,41 @@ h2 {
     text-align: center;
     transition: all 0.3s ease;
     border: 1px solid var(--border);
+}
+
+.email-application {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.email-application h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+.email-application p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.email-application a {
+    color: var(--text);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.email-application a:hover {
+    opacity: 0.7;
+}
+
+.email-requirements {
+    color: var(--text-secondary);
+    font-style: italic;
+    line-height: 1.6;
 }
 
 .application-option:hover {
@@ -339,5 +487,14 @@ footer {
 
     .application-options {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .email-application {
+        padding: 0;
+    }
+
+    .email-application p {
+        text-align: center;
     }
 } 
