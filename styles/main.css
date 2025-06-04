@@ -29,6 +29,9 @@ header {
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
+    height: 64px;
+    display: flex;
+    align-items: center;
 }
 
 .header-content {
@@ -37,11 +40,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .logo-header {
     height: 24px;
     width: auto;
+    display: block;
 }
 
 /* Navigation */
@@ -107,29 +113,30 @@ h2 {
 /* Hero Section */
 .hero {
     position: relative;
-    padding: 8rem 2rem 4rem;
+    margin: 0;
+    padding: 64px 0 0 0;
     text-align: center;
-    background: radial-gradient(circle at center, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.7)), 
-                linear-gradient(rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.65)), 
+    background: radial-gradient(circle at center, rgba(10, 10, 10, 0.1), rgba(10, 10, 10, 0.05)), 
+                linear-gradient(rgba(10, 10, 10, 0.35), rgba(10, 10, 0.35)), 
                 url('../images/hero.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 80vh;
+    height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .hero-content {
-    max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    padding: 0 1rem;
+    margin-top: -32px;
 }
 
 .hero-text {
@@ -141,6 +148,7 @@ h2 {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .hero p {
@@ -155,6 +163,7 @@ h2 {
     max-width: 350px;
     width: 100%;
     height: auto;
+    display: block;
 }
 
 /* Responsive Design */
@@ -169,17 +178,10 @@ h2 {
 }
 
 @media (max-width: 768px) {
-    .hero {
-        padding: 6rem 1rem 3rem;
-        min-height: 70vh;
-        background-image: radial-gradient(circle at center, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.7)), 
-                         linear-gradient(rgba(10, 10, 10, 0.65), rgba(10, 10, 10, 0.65)), 
-                         url('../images/hero-mobile.webp');
-    }
-
     .hero-content {
         flex-direction: column-reverse;
         gap: 2rem;
+        margin-top: -16px;
     }
 
     .hero-text {
@@ -222,8 +224,7 @@ h2 {
 
 @media (max-height: 600px) {
     .hero {
-        min-height: auto;
-        padding: 5rem 1rem 2rem;
+        padding: 2rem 1rem;
     }
 }
 
