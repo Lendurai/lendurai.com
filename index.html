@@ -1,28 +1,31 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lendurai - satellite navigation and radio independent missions for drones.</title>
-    <meta name="description" content="Lendurai enables drones to operate without GNSS using computer vision and AI. Providing autonomous navigation solutions for defence and public sector UAVs.">
-    <meta name="keywords" content="autonomous drones, UAV, GNSS-independent navigation, defence technology, computer vision, AI drones">
+    <title>{{ site.seo.title }}</title>
+    <meta name="description" content="{{ site.seo.description }}">
+    <meta name="keywords" content="{{ site.seo.keywords }}">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lendurai.com/">
-    <meta property="og:title" content="Lendurai - satellite navigation and radio independent missions for drones.">
-    <meta property="og:description" content="Lendurai enables drones to operate without GNSS using computer vision and AI. Providing autonomous navigation solutions for defence and public sector UAVs.">
-    <meta property="og:image" content="https://lendurai.com/images/hero.webp">
+    <meta property="og:url" content="{{ site.url }}/">
+    <meta property="og:title" content="{{ site.seo.title }}">
+    <meta property="og:description" content="{{ site.seo.description }}">
+    <meta property="og:image" content="{{ site.seo.image }}">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://lendurai.com/">
-    <meta property="twitter:title" content="Lendurai - satellite navigation and radio independent missions for drones.">
-    <meta property="twitter:description" content="Lendurai enables drones to operate without GNSS using computer vision and AI. Providing autonomous navigation solutions for defence and public sector UAVs.">
-    <meta property="twitter:image" content="https://lendurai.com/images/hero.webp">
+    <meta name="twitter:card" content="{{ site.seo.twitter_card }}">
+    <meta name="twitter:url" content="{{ site.url }}/">
+    <meta name="twitter:title" content="{{ site.seo.title }}">
+    <meta name="twitter:description" content="{{ site.seo.description }}">
+    <meta name="twitter:image" content="{{ site.seo.image }}">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://lendurai.com/">
+    <link rel="canonical" href="{{ site.url }}/">
     
     <!-- Preload critical assets -->
     <link rel="preload" href="styles/main.css" as="style">
@@ -37,18 +40,18 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Lendurai OÜ",
-      "url": "https://lendurai.com",
-      "logo": "https://lendurai.com/images/logo.png",
-      "description": "Lendurai - Satellite navigation and radio independent missions for drones.",
+      "name": "{{ site.seo.organization.name }}",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.seo.organization.logo }}",
+      "description": "{{ site.seo.organization.description }}",
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "Estonia"
+        "addressCountry": "{{ site.seo.organization.address_country }}"
       },
-      "vatID": "EE102706309",
-      "foundingDate": "2024",
+      "vatID": "{{ site.seo.organization.vat_id }}",
+      "foundingDate": "{{ site.seo.organization.founding_date }}",
       "sameAs": [
-        "https://www.linkedin.com/company/lendurai"
+        "{{ site.seo.organization.linkedin }}"
       ]
     }
     </script>
@@ -135,78 +138,21 @@
                 Join our team and help shape the future of autonomous drone technology.
             </p>
             <div class="jobs-grid">
-                    <div class="job-card" onclick="window.location.href='careers/software-engineer-control.html'" style="cursor: pointer;">
+                {% assign sorted_jobs = site.jobs | sort: 'date_posted' %}
+                {% for job in sorted_jobs %}
+                    <div class="job-card" onclick="window.location.href='{{ job.url }}'" style="cursor: pointer;">
                         <h3>
-                            Software Engineer, Control Systems
+                            {{ job.title }}
                             <div class="job-location">
                                 <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
                                     <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                                 </svg>
-                                <span>Tallinn, Estonia (On-site)</span>
+                                <span>{{ job.location }}</span>
                             </div>
                         </h3>
-                        <p>Design and implement robust flight control systems for autonomous UAV operations in GNSS-denied environments.</p>
+                        <p>{{ job.content | strip_html | truncate: 150 }}</p>
                     </div>
-                    <div class="job-card" onclick="window.location.href='careers/software-engineer-simulation.html'" style="cursor: pointer;">
-                        <h3>
-                            Software Engineer, Simulation
-                            <div class="job-location">
-                                <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                    <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                                <span>Tallinn, Estonia (Hybrid)</span>
-                            </div>
-                        </h3>
-                        <p>Design and develop realistic simulation environments for UAV operations, focusing on flight dynamics, sensor fusion, and mission scenarios.</p>
-                    </div>
-                    <div class="job-card" onclick="window.location.href='careers/software-engineer-ui.html'" style="cursor: pointer;">
-                        <h3>
-                            Software Engineer, User Interface
-                            <div class="job-location">
-                                <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                    <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                                <span>Tallinn, Estonia (Hybrid)</span>
-                            </div>
-                        </h3>
-                        <p>Create intuitive and responsive user interfaces for drone control and mission planning systems, focusing on real-time visualization and operator experience.</p>
-                    </div>
-                    <div class="job-card" onclick="window.location.href='careers/head-of-business-development.html'" style="cursor: pointer;">
-                    <h3>
-                        Head of Business Development
-                        <div class="job-location">
-                            <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>Tallinn, Estonia (Hybrid)</span>
-                        </div>
-                    </h3>
-                    <p>Lead our B2G sales, build partnerships with UAV manufacturers, expand into new defence markets, and shape our go-to-market strategy.</p>
-                </div>
-                    <div class="job-card" onclick="window.location.href='careers/head-of-strategic-affairs.html'" style="cursor: pointer;">
-                    <h3>
-                        Head of Strategic Affairs
-                        <div class="job-location">
-                            <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>Tallinn, Estonia (Hybrid)</span>
-                        </div>
-                    </h3>
-                    <p>Lead our communications, public positioning, and government-facing initiatives while managing strategic R&D programmes and grants.</p>
-                </div>
-                    <div class="job-card" onclick="window.location.href='careers/country-manager-ukraine.html'" style="cursor: pointer;">
-                    <h3>
-                        Country Manager, Ukraine
-                        <div class="job-location">
-                            <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>Kyiv, Ukraine (On-site)</span>
-                        </div>
-                    </h3>
-                    <p>Lead all business development and operations in Ukraine, driving procurement qualification, stakeholder engagement, and local partnerships.</p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

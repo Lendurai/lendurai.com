@@ -1,0 +1,38 @@
+# Site settings
+title: Lendurai
+description: Satellite navigation and radio independent missions for drones
+url: https://lendurai.com
+
+# SEO Configuration
+seo:
+  title: "Lendurai - satellite navigation and radio independent missions for drones."
+  description: "Lendurai enables drones to operate without GNSS using computer vision and AI. Providing autonomous navigation solutions for defence and public sector UAVs."
+  keywords: "autonomous drones, UAV, GNSS-independent navigation, defence technology, computer vision, AI drones"
+  image: "https://lendurai.com/images/hero.webp"
+  twitter_card: "summary_large_image"
+  organization:
+    name: "Lendurai"
+    logo: "https://lendurai.com/images/logo.png"
+    description: "Lendurai - Satellite navigation and radio independent missions for drones."
+    address_country: "Estonia"
+    vat_id: "EE102706309"
+    founding_date: "2024"
+    linkedin: "https://www.linkedin.com/company/lendurai"
+
+# Build settings
+markdown: kramdown
+permalink: /careers/:title/
+
+# Collections
+collections:
+  jobs:
+    output: true
+    permalink: /careers/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "jobs"
+    values:
+      layout: "job-posting" 
