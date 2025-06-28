@@ -1,6 +1,7 @@
 ---
 layout: job-posting
 title: "AI & Drone Software Intern"
+summary: "We are offering a 3–4 months paid internship (flexible start in Q3 2025). As a software development intern you will work with our senior software engineers on features all over the full drone software stack — system, perception, control, planning, simulation."
 location: "Tallinn, Estonia (On-Site)"
 employment_type: "Full-time"
 linkedin_url: "https://www.linkedin.com/jobs/view/4252153449"

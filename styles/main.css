@@ -332,16 +332,26 @@ p:last-child {
 
 .job-card p {
     color: var(--text-secondary);
+    font-size: 0.95rem;
     line-height: 1.5;
+    margin-top: 0.5rem;
 }
 
 /* Job Description Page */
 .job-description {
     background-color: var(--surface);
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 8px;
     margin-bottom: 2rem;
-    border: 1px solid var(--border);
+}
+
+.job-headline {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    font-style: italic;
 }
 
 .job-description ul {

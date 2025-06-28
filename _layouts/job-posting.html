@@ -7,20 +7,20 @@ layout: default
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | {{ site.title }} Careers</title>
-    <meta name="description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}">
+    <meta name="description" content="{{ page.summary | default: page.description | default: page.excerpt | strip_html | truncate: 160 }}">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}/careers/{{ page.name | replace: '.md', '.html' }}">
     <meta property="og:title" content="{{ page.title }} | {{ site.title }} Careers">
-    <meta property="og:description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}">
+    <meta property="og:description" content="{{ page.summary | default: page.description | default: page.excerpt | strip_html | truncate: 160 }}">
     <meta property="og:image" content="{{ site.seo.image }}">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="{{ site.seo.twitter_card }}">
     <meta name="twitter:url" content="{{ site.url }}/careers/{{ page.name | replace: '.md', '.html' }}">
     <meta name="twitter:title" content="{{ page.title }} | {{ site.title }} Careers">
-    <meta name="twitter:description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}">
+    <meta name="twitter:description" content="{{ page.summary | default: page.description | default: page.excerpt | strip_html | truncate: 160 }}">
     <meta name="twitter:image" content="{{ site.seo.image }}">
 
     <!-- Canonical URL -->
@@ -34,7 +34,7 @@ layout: default
       "@context": "https://schema.org",
       "@type": "JobPosting",
       "title": "{{ page.title }}",
-      "description": "{{ page.description | default: page.excerpt | strip_html }}",
+      "description": "{{ page.summary | default: page.description | default: page.excerpt | strip_html }}",
       "datePosted": "{{ page.date_posted }}",
       "validThrough": "{{ page.valid_through }}",
       "employmentType": "{{ page.employment_type }}",

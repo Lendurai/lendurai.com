@@ -1,6 +1,7 @@
 ---
 layout: job-posting
 title: "Software Engineer, Simulation"
+summary: "With a focus on simulation development, you will play a critical role in improving our product development environment and making it more transferable to real-world UAV operations."
 location: "Tallinn, Estonia (Hybrid)"
 employment_type: "Full-time"
 linkedin_url: "https://www.linkedin.com/jobs/view/4236686421"

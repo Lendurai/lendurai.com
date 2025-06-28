@@ -1,6 +1,7 @@
 ---
 layout: job-posting
 title: "UAV Field Operations Engineer"
+summary: "You will own the day-to-day flight-test loop in Tallinn: plan, fly, measure, iterate, and showcase our tech to end-users in defence, public sector and OEM partners."
 location: "Tallinn, Estonia (On-Site)"
 employment_type: "Full-time"
 # linkedin_url: ""
