@@ -1,6 +1,7 @@
 ---
 layout: job-posting
 title: "Head of Business Development"
+summary: "Lead our commercial efforts. You'll drive B2G (business-to-government) sales, build partnerships with UAV manufacturers, expand into new defense markets, and shape our go-to-market strategy alongside the CEO. As we grow, you'll also be responsible for building and leading the business development team."
 location: "Tallinn, Estonia (Hybrid)"
 employment_type: "Full-time"
 linkedin_url: "https://www.linkedin.com/jobs/view/4233705336"

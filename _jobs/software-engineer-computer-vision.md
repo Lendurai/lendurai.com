@@ -1,6 +1,7 @@
 ---
 layout: job-posting
 title: "Computer Vision Engineer"
+summary: "You’ll work on building up the AI stack that lets our aircraft understand the world in GNSS-denied airspace, based purely on visual perception. We're looking for someone who enjoys figuring things out when the path isn’t clear. Someone who likes exploring wild ideas, but also cares about making them actually work in the real world."
 location: "Tallinn, Estonia (Hybrid)"
 employment_type: "Full-time"
 linkedin_url: "https://www.linkedin.com/jobs/view/4252138563"

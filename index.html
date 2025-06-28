@@ -150,7 +150,11 @@ layout: default
                                 <span>{{ job.location }}</span>
                             </div>
                         </h3>
-                        <p>{{ job.content | strip_html | truncate: 150 }}</p>
+                        {% if job.summary %}
+                            <p class="job-headline-summary">{{ job.summary }}</p>
+                        {% else %}
+                            <p>{{ job.content | strip_html | truncate: 150 }}</p>
+                        {% endif %}
                     </div>
                 {% endfor %}
             </div>

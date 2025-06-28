@@ -1,6 +1,7 @@
 ---
 layout: job-posting
 title: "Country Manager, Ukraine"
+summary: "Lead all business development and operations in the country. You will be responsible for qualifying our products for procurement, building awareness among key defence stakeholders, and closing deals. You'll also lead local testing and deployments, support customer success, hire local talent, and develop partnerships with Ukrainian UAV producers."
 location: "Kyiv, Ukraine (On-site)"
 employment_type: "Full-time"
 linkedin_url: "https://www.linkedin.com/jobs/view/4233488413"

@@ -1,6 +1,7 @@
 ---
 layout: job-posting
 title: "Head of Strategic Affairs"
+summary: "Lead our communications, public positioning, and government-facing initiatives. This role combines branding and narrative development, oversight of strategic R&D programmes and grants, and direct engagement with government stakeholders."
 location: "Tallinn, Estonia (Hybrid)"
 employment_type: "Full-time"
 linkedin_url: "https://www.linkedin.com/jobs/view/4233490391"
