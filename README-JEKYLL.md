@@ -1,32 +1,36 @@
 # Lendurai Careers - Jekyll Setup
 
-This document explains the new Jekyll-based templating system for job postings.
+This document explains the Jekyll-based templating system for job postings.
 
 ## Overview
 
-Job postings are now managed using Jekyll with markdown files and a consistent template. This provides:
+Job postings are managed using Jekyll with markdown files and a consistent template. This provides:
 
 - **Consistent structure** across all job pages
 - **Easy content management** using markdown
+- **Compelling job summaries** for main page and SEO
 - **Conditional LinkedIn application** display
-- **Automatic SEO optimization**
-- **Structured data** for search engines
+- **Automatic SEO optimization** with structured data
+- **Social media sharing** optimization
 
 ## File Structure
 
 ```
 lendurai.com/
-├── _config.yml                    # Jekyll configuration
+├── _config.yml                    # Jekyll configuration with SEO settings
 ├── _layouts/
+│   ├── default.html              # Default layout
 │   └── job-posting.html          # Template for job pages
 ├── _jobs/                        # Job posting markdown files
+│   ├── ai-drone-software-intern.md
+│   ├── software-engineer-computer-vision.md
+│   ├── uav-field-operations-engineer.md
 │   ├── software-engineer-simulation.md
 │   ├── head-of-business-development.md
 │   ├── head-of-strategic-affairs.md
-│   ├── country-manager-ukraine.md
-│   └── example-email-only.md
-├── careers/                      # Generated HTML files (legacy)
-└── styles/                       # CSS files
+│   └── country-manager-ukraine.md
+├── styles/                       # CSS files
+└── images/                       # Image assets
 ```
 
 ## Creating a New Job Posting
@@ -38,6 +42,7 @@ lendurai.com/
 ---
 layout: job-posting
 title: "Job Title"
+summary: "Compelling one-liner description of the role for main page and SEO"
 location: "City, Country (Work Type)"
 employment_type: "Full-time"
 linkedin_url: "https://www.linkedin.com/jobs/view/..."  # Optional
@@ -65,6 +70,21 @@ Your job description content here...
 - Benefit 1
 - Benefit 2
 ```
+
+## Job Summary Field
+
+The `summary` field serves multiple purposes:
+
+- **Main page display**: Shows on the careers section as a compelling preview
+- **SEO meta descriptions**: Used in search engine results
+- **Social media sharing**: Appears when job posts are shared on LinkedIn, Facebook, Twitter
+- **Structured data**: Included in JSON-LD for search engines
+
+**Best practices for summaries:**
+- Keep them compelling and action-oriented
+- Focus on the most exciting aspect of the role
+- Aim for 1-2 sentences that capture the essence
+- Use present tense and active voice
 
 ## Conditional LinkedIn Application
 
@@ -96,6 +116,7 @@ jekyll serve
 |-------|----------|-------------|
 | `layout` | Yes | Must be "job-posting" |
 | `title` | Yes | Job title |
+| `summary` | Yes | Compelling description for main page and SEO |
 | `location` | Yes | Job location and work type |
 | `employment_type` | Yes | Full-time, Part-time, Contract, etc. |
 | `linkedin_url` | No | LinkedIn job posting URL |
@@ -106,21 +127,32 @@ jekyll serve
 
 Each job page automatically includes:
 
-- Meta title and description
-- Open Graph tags for social media
-- Twitter Card tags
-- Canonical URL
-- JSON-LD structured data for search engines
-- Proper heading hierarchy
+- **Meta title and description** using the summary field
+- **Open Graph tags** for Facebook/LinkedIn sharing
+- **Twitter Card tags** for Twitter sharing
+- **Canonical URL** for search engines
+- **JSON-LD structured data** for job postings
+- **Proper heading hierarchy** for accessibility
 
-## Migration from HTML
+## Main Page Integration
 
-The existing HTML job pages in the `careers/` directory can be removed once the Jekyll system is fully implemented and tested.
+Job postings automatically appear on the main page careers section:
+
+- **Sorted by date** (newest first)
+- **Summary display** instead of truncated content
+- **Clickable cards** that link to full job descriptions
+- **Location information** with icons
 
 ## Benefits
 
 1. **Consistency**: All job pages follow the same structure
 2. **Maintainability**: Content is separated from presentation
-3. **SEO**: Automatic optimization for search engines
-4. **Flexibility**: Easy to add new fields or modify the template
-5. **Conditional Display**: LinkedIn application only shows when URL is provided 
+3. **SEO Optimization**: Automatic meta tags and structured data
+4. **Social Media Ready**: Optimized for sharing on all platforms
+5. **Flexibility**: Easy to add new fields or modify the template
+6. **Conditional Display**: LinkedIn application only shows when URL is provided
+7. **Compelling Previews**: Summary field creates engaging main page descriptions
+
+## Migration from HTML
+
+The existing HTML job pages in the `careers/` directory can be removed once the Jekyll system is fully implemented and tested. 
