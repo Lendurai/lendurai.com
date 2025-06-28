@@ -1,3 +1,6 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,54 +138,21 @@
                 Join our team and help shape the future of autonomous drone technology.
             </p>
             <div class="jobs-grid">
-                    <div class="job-card" onclick="window.location.href='careers/software-engineer-simulation.html'" style="cursor: pointer;">
+                {% assign sorted_jobs = site.jobs | sort: 'date_posted' %}
+                {% for job in sorted_jobs %}
+                    <div class="job-card" onclick="window.location.href='{{ job.url }}'" style="cursor: pointer;">
                         <h3>
-                            Software Engineer, Simulation
+                            {{ job.title }}
                             <div class="job-location">
                                 <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
                                     <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                                 </svg>
-                                <span>Tallinn, Estonia (Hybrid)</span>
+                                <span>{{ job.location }}</span>
                             </div>
                         </h3>
-                        <p>Design and develop realistic simulation environments for UAV operations, focusing on flight dynamics, sensor fusion, and mission scenarios.</p>
+                        <p>{{ job.excerpt | default: job.description | strip_html | truncate: 150 }}</p>
                     </div>
-                    <div class="job-card" onclick="window.location.href='careers/head-of-business-development.html'" style="cursor: pointer;">
-                    <h3>
-                        Head of Business Development
-                        <div class="job-location">
-                            <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>Tallinn, Estonia (Hybrid)</span>
-                        </div>
-                    </h3>
-                    <p>Lead our B2G sales, build partnerships with UAV manufacturers, expand into new defence markets, and shape our go-to-market strategy.</p>
-                </div>
-                    <div class="job-card" onclick="window.location.href='careers/head-of-strategic-affairs.html'" style="cursor: pointer;">
-                    <h3>
-                        Head of Strategic Affairs
-                        <div class="job-location">
-                            <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>Tallinn, Estonia (Hybrid)</span>
-                        </div>
-                    </h3>
-                    <p>Lead our communications, public positioning, and government-facing initiatives while managing strategic R&D programmes and grants.</p>
-                </div>
-                    <div class="job-card" onclick="window.location.href='careers/country-manager-ukraine.html'" style="cursor: pointer;">
-                    <h3>
-                        Country Manager, Ukraine
-                        <div class="job-location">
-                            <svg class="location-icon" viewBox="0 0 24 24" width="16" height="16">
-                                <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                            </svg>
-                            <span>Kyiv, Ukraine (On-site)</span>
-                        </div>
-                    </h3>
-                    <p>Lead all business development and operations in Ukraine, driving procurement qualification, stakeholder engagement, and local partnerships.</p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

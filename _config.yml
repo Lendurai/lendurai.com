@@ -1,0 +1,22 @@
+# Site settings
+title: Lendurai
+description: Satellite navigation and radio independent missions for drones
+url: https://lendurai.com
+
+# Build settings
+markdown: kramdown
+permalink: /careers/:title/
+
+# Collections
+collections:
+  jobs:
+    output: true
+    permalink: /careers/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "jobs"
+    values:
+      layout: "job-posting" 

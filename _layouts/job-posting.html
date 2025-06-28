@@ -1,0 +1,115 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Lendurai Careers</title>
+    <meta name="description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lendurai.com/careers/{{ page.name | replace: '.md', '.html' }}">
+    <meta property="og:title" content="{{ page.title }} | Lendurai Careers">
+    <meta property="og:description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}">
+    <meta property="og:image" content="https://lendurai.com/images/hero.webp">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://lendurai.com/careers/{{ page.name | replace: '.md', '.html' }}">
+    <meta name="twitter:title" content="{{ page.title }} | Lendurai Careers">
+    <meta name="twitter:description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 160 }}">
+    <meta name="twitter:image" content="https://lendurai.com/images/hero.webp">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lendurai.com/careers/{{ page.name | replace: '.md', '.html' }}">
+    
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      "title": "{{ page.title }}",
+      "description": "{{ page.description | default: page.excerpt | strip_html }}",
+      "datePosted": "{{ page.date_posted }}",
+      "validThrough": "{{ page.valid_through }}",
+      "employmentType": "{{ page.employment_type }}",
+      "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Lendurai OÜ",
+        "sameAs": "https://lendurai.com"
+      },
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "{{ page.location | split: ',' | first | strip }}",
+          "addressCountry": "{{ page.location | split: ',' | last | strip }}"
+        }
+      },
+      "industry": "Defence Technology",
+      "applicationContact": {
+        "@type": "ContactPoint",
+        "email": "careers@lendurai.com"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/">
+                <img src="/images/logo-text.png" alt="Lendurai Logo" class="logo-header">
+            </a>
+            <a href="/" class="back-button">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                </svg>
+                Back
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="job-description">
+            <h1>{{ page.title }}</h1>
+            
+            <div class="job-location">
+                <svg viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <span>{{ page.location }}</span>
+            </div>
+
+            {{ content }}
+        </div>
+
+        <div class="application-options">
+            {% if page.linkedin_url %}
+            <div class="application-option linkedin">
+                <h3>
+                    <svg class="linkedin-icon" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                    </svg>
+                    Apply with LinkedIn
+                </h3>
+                <p>Quick application using your LinkedIn profile</p>
+                <a href="{{ page.linkedin_url }}" target="_blank" class="apply-button">
+                    Apply on LinkedIn
+                </a>
+            </div>
+            {% endif %}
+            
+            <div class="email-application">
+                <h3>Apply via Email</h3>
+                <p>If you don't have a LinkedIn account, please apply by sending your CV to <a href="mailto:careers@lendurai.com">careers@lendurai.com</a> and provide the following details:</p>
+                <p class="email-requirements">phone number, gross salary expectation, earliest start date, willingness to relocate to work location, eligibility for employment at work location</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
