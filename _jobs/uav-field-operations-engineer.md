@@ -49,7 +49,7 @@ Nice to have:
 
 ## What we offer
 
-* Monthly gross salary €2,200-3,200  
+* Monthly gross salary €2,700-3,200  
 * Ability to influence major technical decisions as an early hire  
 * A focus on outcomes  
 * Freedom of working in nature
