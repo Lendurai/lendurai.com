@@ -45,3 +45,4 @@ Nice to have:
 * Stock options  
 * Ability to influence major technical decisions as an early hire  
 * A focus on outcomes
+
