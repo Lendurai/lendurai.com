@@ -140,7 +140,7 @@ layout: default
             <div class="jobs-grid">
                 {% assign sorted_jobs = site.jobs | sort: 'date_posted' %}
                 {% for job in sorted_jobs %}
-                    <div class="job-card" onclick="window.location.href='{{ job.url }}'" style="cursor: pointer;">
+                    <div class="job-card" onclick="window.open('{{ job.apply_url }}', '_blank')" style="cursor: pointer;">
                         <h3>
                             {{ job.title }}
                             <div class="job-location">
