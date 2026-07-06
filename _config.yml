@@ -35,4 +35,6 @@ defaults:
       path: ""
       type: "jobs"
     values:
-      layout: "job-posting" 
+      layout: "job-posting"
+
+# Deployment refresh: forces a new GitHub Pages build version after a transient deploy failure.
